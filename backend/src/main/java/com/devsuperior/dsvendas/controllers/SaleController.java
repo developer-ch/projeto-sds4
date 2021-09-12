@@ -25,7 +25,6 @@ public class SaleController {
 	@GetMapping
 	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
 		Page<SaleDTO> list = service.findAll(pageable);
-		System.out.println("DEALS ENCONTARADO" + list.getContent().get(0).getDeals());
 		return ResponseEntity.ok(list);
 	}
 	
